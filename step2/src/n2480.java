@@ -17,13 +17,8 @@ public class n2480 {
         } else if (b == c)
             award = 1000 + b * 100;
         else {
-            if (a > award)
-                award = a;
-            if (b > award)
-                award = b;
-            if (c > award)
-                award = c;
-            award *= 100;
+            int max = Math.max(a, Math.max(b, c));
+            award = max * 100;
         }
         System.out.println(award);
 
